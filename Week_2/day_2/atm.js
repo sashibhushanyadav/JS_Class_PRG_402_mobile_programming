@@ -1,38 +1,38 @@
-let amount = 10000;
+let balance = 10000;
+
+const displayPrompt = document.getElementById("displayPrompt");
+const amountInput = document.getElementById("amount");
 
 function moneyWithdraw() {
-  let money = Number(document.getElementById("amount").value);
-
-  if (money % 100 == 0) {
+  const withdrawAmount = Number(amountInput.value);
+  
+  // Control Statement (if-else conditional with Arthimetic (+, %) & Comparison assignments (==))
+  if (withdrawAmount % 100 == 0) {
     const pinCode = 1234;
-    let withdrawPin = Number(prompt("Enter withdraw Pin Number: "));
+    const withdrawPin = Number(prompt("Enter withdraw Pin Number: "));
 
     if (withdrawPin == pinCode) {
-      document.getElementById("heading").innerHTML =
-        `Balance: ${amount - money}`;
+      displayPrompt.innerHTML = `Balance: ${balance - withdrawAmount}`;
     } else {
-      document.getElementById("heading").innerHTML = `Invalid Pin Code`;
+      displayPrompt.innerHTML = `Invalid Pin`;
     }
   } else {
-    document.getElementById("heading").innerHTML =
-      `Amount must be a multiple of 100`;
+    displayPrompt.innerHTML = `Amount must be a multiple of 100`;
   }
 }
 
 function moneyDeposit() {
-  let money = Number(document.getElementById("amount").value);
-
-  if (money % 100 == 0) {
+  const depositAmount = Number(amountInput.value);
+  if (depositAmount % 100 == 0) {
     const pinCode = 5678;
-    let depositPin = Number(prompt("Enter Deposit Pin Number: "));
+    const depositPin = Number(prompt("Enter Deposit Pin Number: "));
+
     if (depositPin === pinCode) {
-      document.getElementById("heading").innerHTML =
-        `Balance: ${amount + money}`;
+      displayPrompt.innerHTML = `Balance: ${balance + depositAmount}`;
     } else {
-      document.getElementById("heading").innerHTML = `Invalid Pin Code`;
+      displayPrompt.innerHTML = `Invalid Pin`;
     }
   } else {
-    document.getElementById("heading").innerHTML =
-      `Amount must be a multiple of 100`;
+    displayPrompt.innerHTML = `Amount must be a multiple of 100`;
   }
 }

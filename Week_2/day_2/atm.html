@@ -4,15 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ATM System</title>
+    <style>
+      button {
+        border: 2px solid;
+        border-radius: 5px;
+        width: 100px;
+        height: 30px;
+      }
+    </style>
   </head>
   <body>
     <div>
       <label for="">Amount: </label><br />
       <input type="number" name="" id="amount" Amount Rs. /> <br />
-      <h3 id="heading"></h3>
+      <h3 id="displayPrompt"></h3>
 
-      <button id="withdraw" onclick="moneyWithdraw()">Withdraw</button>
-      <button id="deposit" onclick="moneyDeposit()">Deposit</button>
+      <button
+        id="withdraw"
+        style="background-color: greenyellow"
+        onclick="moneyWithdraw()"
+      >
+        Withdraw
+      </button>
+      <button
+        id="deposit"
+        style="background-color: rgb(124, 75, 238)"
+        onclick="moneyDeposit()"
+      >
+        Deposit
+      </button>
     </div>
 
     <script src="/Week_2/day_2/atm.js"></script>
