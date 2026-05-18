@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM_System_Eye_Feature </title>
+
+    <style>
+      button {
+        border: 2px solid;
+        border-radius: 5px;
+        width: 100px;
+        height: 30px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <label for="">Amount: </label><br />
+      <input type="number" name="" id="amount" Amount Rs. /> <br />
+      <h3 id="displayPrompt">
+        Current Balance: Rs. <span id="balanceAmount">10000</span>
+        <i class="fa-solid fa-eye" id="toggleEye" style="cursor: pointer"></i>
+      </h3>
+
+      <button
+        id="withdraw"
+        style="background-color: greenyellow"
+        onclick="moneyWithdraw()"
+      >
+        Withdraw
+      </button>
+      <button
+        id="deposit"
+        style="background-color: rgb(124, 75, 238)"
+        onclick="moneyDeposit()"
+      >
+        Deposit
+      </button>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#toggleEye").click(function () {
+          const balance = $("#balanceAmount");
+
+          // Toggle hide/show
+          if (balance.text() === "****") {
+            balance.text("10000");
+
+            // change icon back to eye
+            $(this).removeClass("fa-eye-slash").addClass("fa-eye");
+          } else {
+            balance.text("****");
+
+            // change icon to crossed eye
+            $(this).removeClass("fa-eye").addClass("fa-eye-slash");
+          }
+        });
+      });
+    </script>
+    <script src="/Week_3/day_1/ATM_Machine/index.js"></script>
+  </body>
+</html>
