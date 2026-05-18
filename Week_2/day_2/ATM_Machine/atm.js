@@ -5,8 +5,9 @@ const amountInput = document.getElementById("amount");
 
 function moneyWithdraw() {
   const withdrawAmount = Number(amountInput.value);
-  
-  // Control Statement (if-else conditional with Arthimetic (+, %) & Comparison assignments (==))
+
+  // Control Statement (if-else conditional with Arithematic (+, %) &
+  // Comparison assignments (==))
   if (withdrawAmount % 100 == 0) {
     const pinCode = 1234;
     const withdrawPin = Number(prompt("Enter withdraw Pin Number: "));
