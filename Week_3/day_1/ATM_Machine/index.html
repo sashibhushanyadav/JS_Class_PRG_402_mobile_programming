@@ -48,13 +48,13 @@
           const balance = $("#balanceAmount");
 
           // Toggle hide/show
-          if (balance.text() === "****") {
+          if (balance.text() === "*****") {
             balance.text("10000");
 
             // change icon back to eye
             $(this).removeClass("fa-eye-slash").addClass("fa-eye");
           } else {
-            balance.text("****");
+            balance.text("*****");
 
             // change icon to crossed eye
             $(this).removeClass("fa-eye").addClass("fa-eye-slash");
