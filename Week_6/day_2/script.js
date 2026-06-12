@@ -58,8 +58,8 @@ function writeUserData(
   });
 }
 writeUserData(
-  2,
-  "Rajiv",
+  1,
+  "Sashi",
   "Bhushan",
   "Yadav",
   "Male",
@@ -67,8 +67,8 @@ writeUserData(
   "KTM",
   44500,
   98779369,
-  3.99,
-  "Extra Ordinary",
+  3.04,
+  "Ordinary",
 );
 
 // ref(db, 'users') points to the users path.
@@ -111,6 +111,6 @@ function deleteUserData(userId) {
 }
 
 // Example usage:
-deleteUserData(1);
+deleteUserData();
 
 //console.log("Added! Good")

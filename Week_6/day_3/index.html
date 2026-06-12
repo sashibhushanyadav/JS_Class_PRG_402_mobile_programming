@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Realtime DB Demo</title>
+  </head>
+  <body>
+    <h1>Firebase Realtime Database CRUD</h1>
+    <script type="module" src="main.js"></script>
+
+    <h2>Create / Write User</h2>
+    <input type="text" id="create-id" placeholder="User ID" />
+    <input type="text" id="create-firstName" placeholder="First Name" />
+    <input type="text" id="create-middleName" placeholder="Middle Name" />
+    <input type="text" id="create-lastName" placeholder="Last Name" />
+    <input type="text" id="create-gender" placeholder="Gender" />
+    <input type="text" id="create-contactNo" placeholder="Contact Number" />
+    <input type="text" id="create-address" placeholder="Address" />
+    <input type="text" id="create-postCode" placeholder="Post Code" />
+    <input type="text" id="create-passportNo" placeholder="Passport Number" />
+    <input type="text" id="create-cgpa" placeholder="CGPA" />
+    <input type="text" id="create-remark" placeholder="Remark" />
+    <button
+      onclick="
+        writeUserData(
+          document.getElementById('create-id').value,
+          document.getElementById('create-firstName').value,
+          document.getElementById('create-middleName').value,
+          document.getElementById('create-lastName').value,
+          document.getElementById('create-gender').value,
+          document.getElementById('create-contactNo').value,
+          document.getElementById('create-address').value,
+          document.getElementById('create-postCode').value,
+          document.getElementById('create-passportNo').value,
+          document.getElementById('create-cgpa').value,
+          document.getElementById('create-remark').value,
+        )
+      "
+    >
+      Write User
+    </button>
+
+    <h2>Read Users</h2>
+    <button onclick="readUser()">Read All Users (Check Console)</button>
+
+    <h3>Read One User by ID</h3>
+    <input type="text" id="read-id" placeholder="User ID" />
+    <button onclick="readUserById(document.getElementById('read-id').value)">
+      Read User
+    </button>
+    <p id="read-result"></p>
+
+    <h2>Update User</h2>
+    <input type="text" id="update-id" placeholder="User ID" />
+    <button
+      onclick="fetchUserForUpdate(document.getElementById('update-id').value)"
+    >
+      Fetch User
+    </button>
+    <br /><br />
+    <input type="text" id="update-fname" placeholder="First Name" />
+    <input type="text" id="update-mname" placeholder="Middle Name" />
+    <input type="text" id="update-lname" placeholder="Last Name" />
+    <input type="text" id="update-gender" placeholder="Gender" />
+    <input type="text" id="update-contact" placeholder="Contact Number" />
+    <input type="text" id="update-address" placeholder="Address" />
+    <input type="text" id="update-postcode" placeholder="Post Code" />
+    <input type="text" id="update-passport" placeholder="Passport Number" />
+    <input type="text" id="update-cgpa" placeholder="CGPA" />
+    <input type="text" id="update-remark" placeholder="Remark" />
+
+    <button
+      onclick="
+        updateUserData(document.getElementById('update-id').value, {
+          firstname: document.getElementById('update-fname').value,
+          middlename: document.getElementById('update-mname').value,
+          lastname: document.getElementById('update-lname').value,
+          gender: document.getElementById('update-gender').value,
+          contact: document.getElementById('update-contact').value,
+          address: document.getElementById('update-address').value,
+          postcode: document.getElementById('update-postcode').value,
+          passportno: document.getElementById('update-passport').value,
+          cgpa: document.getElementById('update-cgpa').value,
+          remark: document.getElementById('update-remark').value,
+        })
+      "
+    >
+      Update User
+    </button>
+
+    <h2>Delete User</h2>
+    <input type="text" id="delete-id" placeholder="User ID" />
+    <button
+      onclick="deleteUserData(document.getElementById('delete-id').value)"
+    >
+      Delete User
+    </button>
+  </body>
+</html>
