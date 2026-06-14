@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="contact">
+        <form action="#" method="post">
+          <fieldset>
+            <legend style="font-size: large"><b>Contact Us</b></legend>
+            <div id="firstDiv">
+              <label for="fullname">Full Name:</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter Full Name"
+              />
+
+              <label for="email">Email Address:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="abcd@gmail.com"
+              />
+            </div>
+
+            <div id="secondDiv">
+              <label for="phone">Phone Number:</label>
+              <input
+                type="number"
+                id="phone"
+                name="phone"
+                placeholder="98********"
+              />
+
+              <label for="subject">Subject:</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Write Topic"
+              />
+            </div>
+
+            <label for="message">Message:</label><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              cols="40"
+              placeholder="Write the message here....."
+            ></textarea
+            ><br /><br />
+
+            <button
+              type="button"
+              class="btn"
+              id="submit"
+              style="background-color: rgb(181, 119, 229)"
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              class="btn"
+              id="update"
+              style="background-color: rgb(105, 167, 217)"
+            >
+              Update
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <div id="details">
+        <form action="#" method="post">
+          <fieldset>
+            <legend style="font-size: large"><b>Details</b></legend>
+            <input type="hidden" id="details-userId" />
+            <div id="detials-firstDiv">
+              <label for="fullname">Full Name:</label>
+              <input
+                type="text"
+                id="details-fullname"
+                name="fullname"
+                readonly
+              />
+
+              <label for="email">Email Address:</label>
+              <input type="email" id="details-email" name="email" readonly />
+            </div>
+
+            <div id="details-secondDiv">
+              <label for="phone">Phone Number:</label>
+              <input type="number" id="details-phone" name="phone" readonly />
+
+              <label for="subject">Subject:</label>
+              <input type="text" id="details-subject" name="subject" readonly />
+            </div>
+
+            <label for="message">Message:</label><br />
+            <textarea
+              id="details-message"
+              name="message"
+              rows="5"
+              cols="40"
+              placeholder="Write the message here....."
+              readonly
+            ></textarea
+            ><br /><br />
+
+            <button
+              type="submit"
+              class="btn"
+              id="edit"
+              style="background-color: rgb(119, 213, 229)"
+            >
+              Edit
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./contactUs.js"></script>
+  </body>
+</html>
