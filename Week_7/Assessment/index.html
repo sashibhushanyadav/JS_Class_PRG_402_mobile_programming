@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>QuickHire</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Google Fonts - Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <!-- App Container -->
+      <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+          <div class="header-content">
+            <div class="logo-container">
+              <h1 class="app-logo">QuickHire</h1>
+            </div>
+            <div class="header-actions">
+              <button
+                class="icon-btn"
+                aria-label="Notifications"
+                onclick="showToast('Notifications coming soon!', 'info')"
+              >
+                <i class="fas fa-bell"></i>
+              </button>
+              <button
+                class="avatar-btn"
+                aria-label="User Profile"
+                onclick="navigateTo('profile')"
+              >
+                <img
+                  src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2020/12/16173152/2021-Hennessey-Venom-F5-Exterior-Static-Shots-18-1200x1742-1.jpg"
+                  alt="User Avatar"
+                  class="avatar-image"
+                />
+              </button>
+            </div>
+          </div>
+          <!-- Search Bar - Only visible on Home, Workers, and Jobs pages -->
+          <div class="search-container" id="globalSearchContainer">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              class="search-input"
+              id="globalSearch"
+              placeholder="Find workers or jobs..."
+            />
+          </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+          <!-- Pages will be rendered here -->
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+          <button class="nav-item active" data-page="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </button>
+          <button class="nav-item" data-page="jobs">
+            <i class="fas fa-briefcase"></i>
+            <span>Jobs</span>
+          </button>
+          <button class="nav-item hire-btn" data-page="hire">
+            <i class="fas fa-plus-circle"></i>
+            <span>Hire</span>
+          </button>
+          <button class="nav-item" data-page="messages">
+            <i class="fas fa-comment"></i>
+            <span>Messages</span>
+          </button>
+          <button class="nav-item" data-page="profile">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="importmap">
+      {
+        "imports": {
+          "firebase/app": "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js",
+          "firebase/database": "https://www.gstatic.com/firebasejs/12.15.0/firebase-database.js"
+        }
+      }
+    </script>
+
+    <!-- Main JavaScript -->
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
